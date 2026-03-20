@@ -4274,6 +4274,7 @@ static pthread_mutex_t lastStateMutex = PTHREAD_MUTEX_INITIALIZER;
 	id input = (  echoResponse
 				? [[[NSTextField       alloc] initWithFrame:NSMakeRect(0, 0, 200, 24)] autorelease]
 				: [[[NSSecureTextField alloc] initWithFrame:NSMakeRect(0, 0, 200, 24)] autorelease]);
+	[input setContentType: NSTextContentTypeOneTypeCode];
 	[alert setAccessoryView: input];
 	[[alert window] setInitialFirstResponder: input];
     [gMC activateIgnoringOtherApps];
